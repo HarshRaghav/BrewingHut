@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cutecoffee"
+    android:backgroundTint="#CBFFFFFF"
+    android:backgroundTintMode="src_over"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/et1"
+        android:textStyle="bold"
+        style="@style/HeaderBoldStyle"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="eg- Harsh Raghav"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/et2"
+        style="@style/HeaderBoldStyle"
+        android:textStyle="bold"
+        android:layout_below="@id/editText1"
+        android:text="@string/address" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et2"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:hint="Please Enter your address"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/HeaderBoldStyle"
+        android:textStyle="bold"
+        android:layout_below="@id/editText2"
+        android:text="@string/toppings" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        style="@style/CheckBoldStyle"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="24dp"
+        android:onClick="cream"
+        android:text="@string/whippedcream" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        style="@style/CheckBoldStyle"
+        android:onClick="chocolate"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@+id/checkBox1"
+        android:text="@string/chocolate_topping" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/HeaderBoldStyle"
+        android:textStyle="bold"
+        android:layout_below="@id/checkBox1"
+        android:text="@string/quantity" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttoninc"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="inc"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:text="0"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttondec"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:onClick="dec"
+            android:text="-" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/HeaderBoldStyle"
+        android:layout_below="@id/linearlayout1"
+        android:text="@string/total" />
+
+    <TextView
+        android:id="@+id/Order_Summary_textView"
+        style="@style/HeaderBoldStyle"
+        android:layout_below="@id/textView3"
+        android:text="@string/currency" />
+
+    <Button
+        android:id="@+id/buttonsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Order_Summary_textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="submitOrder"
+        android:text="@string/order" />
+
+</RelativeLayout>
